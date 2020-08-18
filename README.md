@@ -22,16 +22,16 @@
 
 | Column              | Type      | Options                        |
 | ------------------- | --------- | ------------------------------ |
-| product_name        | string    | null: false                    |
-| product_description | text      | null: false                    |
-| product_image       | text      | null: false                    |
+| name                | string    | null: false                    |
+| description         | text      | null: false                    |
+| image               | text      | null: false                    |
 | category_id         | integer   | null: false                    |
 | product_status_id   | integer   | null: false                    |
 | delivery_fee_id     | integer   | null: false                    |
 | ship_from_id        | integer   | null: false                    |
 | time_to_ship        | integer   | null: false                    |
 | price               | integer   | null: false                    |
-| user_id             | reference | null: false, foreign_key: true |
+| user                | reference | null: false, foreign_key: true |
 
 ### Association
 
@@ -40,10 +40,10 @@
 
 ## purchase テーブル
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| user_id | references | null: false, foreign_key: true |
-| item_id | references | null: false, foreign_key: true |
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| item   | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -61,7 +61,7 @@
 | house_number   | string     | null: false                    |
 | building_name  | string     |                                |
 | phone_number   | string     | null: false                    |
-| purchase_id    | references | null: false, foreign_key: true |
+| purchase       | references | null: false, foreign_key: true |
 
 ### Association
 
